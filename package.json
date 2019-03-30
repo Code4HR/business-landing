@@ -6,17 +6,20 @@
   "dependencies": {
     "cors": "^2.7.1",
     "express": "^4.13.3",
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.0",
     "gulp-nodemon": "^2.0.4",
     "mongodb": "^2.0.46",
     "querystring": "^0.2.0",
     "request": "^2.65.0",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "snyk": "^1.143.5"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -34,5 +37,6 @@
   "bugs": {
     "url": "https://github.com/team-photon/business-landing/issues"
   },
-  "homepage": "https://github.com/team-photon/business-landing#readme"
+  "homepage": "https://github.com/team-photon/business-landing#readme",
+  "snyk": true
 }
